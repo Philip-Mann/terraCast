@@ -2,7 +2,10 @@
 A Weather App built with React utilizing Bootstrap and the OpenWeatherAPI.
 
 # Want to run on your computer?
-`git clone `
+- `git clone https://github.com/Philip-Mann/terraCast.git`
+- run `npm install` in your terminal
+- `cd <whatEverFolderYouClonedThisIn:)>`
+- and then run `npm start`
 
 
 Using hooks, and `{ useEffect }`, I fetched the weather data from OpenWeather API and rendered it to the DOM using `{ useState }`.
