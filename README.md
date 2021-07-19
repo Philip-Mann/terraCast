@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Welcome to TerraCast!
+A Weather App built with React utilizing Bootstrap and the OpenWeatherAPI.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Want to run on your computer?
+`git clone `
 
-## Available Scripts
 
-In the project directory, you can run:
+Using hooks, and `{ useEffect }`, I fetched the weather data from OpenWeather API and rendered it to the DOM using `{ useState }`.
 
-### `npm start`
+The most challenging part for myself was passing the state of my input into my `<Current />` component. With this being my first React project I found myself having to think about how websites are created differently. 
+```
+<form onSubmit={handleSubmit} className="form">
+    <input id="query" onChange={handleChange} placeholder="Search By City..." type="text" value={query} />
+    <button className="btn-dark btn-sm" type="submit">Search</button>
+</form>
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I figured out, using hooks, that passing the value of my input as a prop `value={query}` into my Current componenet was as easy as: 
+```
+const [query, setQuery] = useState('');
+const [locationQuery, setLocationQuery] = useState('Washington DC');
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+const handleChange = e => {
+    setQuery(e.target.value);
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+const handleSubmit = e => {
+    e.preventDefault();
+    setLocationQuery(query);
+    setQuery('');
+}
 
-### `npm run build`
+return (
+    <Current 
+        locationQuery={locationQuery}
+    />
+)
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+From there I was able to add `{locationQuery}` to my API call to get the current weather forecast for any place the user types in.
