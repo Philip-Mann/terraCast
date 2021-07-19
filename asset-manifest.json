@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/terraCast/static/css/main.ecaeddc7.chunk.css",
+    "main.js": "/terraCast/static/js/main.9245f236.chunk.js",
+    "main.js.map": "/terraCast/static/js/main.9245f236.chunk.js.map",
+    "runtime-main.js": "/terraCast/static/js/runtime-main.9ef7957a.js",
+    "runtime-main.js.map": "/terraCast/static/js/runtime-main.9ef7957a.js.map",
+    "static/css/2.4be38407.chunk.css": "/terraCast/static/css/2.4be38407.chunk.css",
+    "static/js/2.6481c6d1.chunk.js": "/terraCast/static/js/2.6481c6d1.chunk.js",
+    "static/js/2.6481c6d1.chunk.js.map": "/terraCast/static/js/2.6481c6d1.chunk.js.map",
+    "static/js/3.937e0fab.chunk.js": "/terraCast/static/js/3.937e0fab.chunk.js",
+    "static/js/3.937e0fab.chunk.js.map": "/terraCast/static/js/3.937e0fab.chunk.js.map",
+    "index.html": "/terraCast/index.html",
+    "static/css/2.4be38407.chunk.css.map": "/terraCast/static/css/2.4be38407.chunk.css.map",
+    "static/css/main.ecaeddc7.chunk.css.map": "/terraCast/static/css/main.ecaeddc7.chunk.css.map",
+    "static/js/2.6481c6d1.chunk.js.LICENSE.txt": "/terraCast/static/js/2.6481c6d1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ef7957a.js",
+    "static/css/2.4be38407.chunk.css",
+    "static/js/2.6481c6d1.chunk.js",
+    "static/css/main.ecaeddc7.chunk.css",
+    "static/js/main.9245f236.chunk.js"
+  ]
+}
