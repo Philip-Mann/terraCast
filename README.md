@@ -1,5 +1,6 @@
 # Welcome to TerraCast!
 A Weather App built with React utilizing Bootstrap and the OpenWeatherAPI.
+[Link to live site](https://philip-mann.github.io/terraCast/) 
 
 # Want to run on your computer?
 - `git clone https://github.com/Philip-Mann/terraCast.git`
